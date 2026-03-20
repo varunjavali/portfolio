@@ -3,36 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Varun Kumar | Portfolio</title>
+<title>Varun Kumar | DevOps & Software Developer</title>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
-    margin: 0;
     background: #0b141a;
     color: white;
 }
 
+/* HEADER */
 header {
     text-align: center;
-    padding: 30px;
+    padding: 30px 15px;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
+header p {
+    color: #9ca3af;
+}
+
+/* BUTTONS */
 .btn {
     display: inline-block;
-    background: #25D366;
-    color: black;
     padding: 10px 15px;
-    margin-top: 10px;
+    margin: 5px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
+.btn-resume {
+    background: #25D366;
+    color: black;
+}
+
+.btn-github {
+    background: #1f2937;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: center;
@@ -43,16 +68,25 @@ nav {
 
 nav a {
     color: white;
-    margin: 10px;
+    margin: 8px 12px;
     text-decoration: none;
+    font-size: 0.9rem;
 }
 
+/* SECTION */
 section {
-    padding: 20px;
+    padding: 25px 15px;
     max-width: 1100px;
     margin: auto;
 }
 
+h2 {
+    margin-bottom: 15px;
+    border-left: 4px solid #25D366;
+    padding-left: 10px;
+}
+
+/* GRID */
 .grid {
     display: grid;
     gap: 15px;
@@ -70,24 +104,24 @@ section {
     }
 }
 
+/* CARD */
 .card {
     background: #111b21;
     padding: 15px;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
-.card a {
-    display: inline-block;
-    margin-top: 8px;
-    color: #25D366;
-    text-decoration: none;
-    font-size: 0.9rem;
+.card:hover {
+    transform: translateY(-5px);
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 15px;
     background: #111b21;
+    margin-top: 20px;
 }
 </style>
 
@@ -97,53 +131,89 @@ footer {
 
 <header>
     <h1>Varun Kumar J A</h1>
-    <p>MCA Student | Software Developer</p>
+    <p>DevOps Engineer | Software Developer</p>
 
-    <!-- Resume Button -->
-    <a href="varun_csv.pdf" download class="btn">⬇ Download Resume</a>
+    <div style="margin-top:15px;">
+        <a href="varun_csv.pdf" download class="btn btn-resume">
+            ⬇ Download Resume
+        </a>
+
+        <a href="https://github.com/varunjavali" target="_blank" class="btn btn-github">
+            🔗 Go to GitHub
+        </a>
+    </div>
 </header>
 
 <nav>
+    <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#devops">DevOps</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
 
+<section id="about">
+    <h2>About</h2>
+    <div class="card">
+        <p>
+            MCA student with experience in software development and currently learning DevOps.
+            Skilled in building applications and deploying them using modern cloud technologies.
+        </p>
+    </div>
+</section>
+
 <section id="skills">
-    <h2>Skills</h2>
+    <h2>Development Skills</h2>
     <div class="grid">
-        <div class="card">Python, PHP, SQL, Dart</div>
+        <div class="card">Python, PHP, SQL, Dart, Java, C</div>
         <div class="card">Flutter, HTML, CSS</div>
         <div class="card">Node.js, REST APIs</div>
-        <div class="card">Git, GitHub, Postman</div>
+        <div class="card">Git, Postman, VS Code</div>
+    </div>
+</section>
+
+<section id="devops">
+    <h2>DevOps Skills</h2>
+    <div class="grid">
+        <div class="card">AWS (EC2, S3, IAM, RDS)</div>
+        <div class="card">Docker (Build, Run, Push, Compose)</div>
+        <div class="card">Kubernetes (Pods, Deployments, Services)</div>
+        <div class="card">CI/CD (Basic understanding)</div>
     </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
-
         <div class="card">
             <h3>IoT Dashboard</h3>
-            <p>Flutter + Node.js + MySQL</p>
-            <a href="#" target="_blank">🌐 Live Demo</a><br>
-            <a href="https://github.com/your-username/iot-dashboard" target="_blank">🔗 GitHub</a>
+            <p>Flutter + Node.js + MySQL with real-time data</p>
         </div>
 
         <div class="card">
-            <h3>Accident Detection</h3>
-            <p>GPS + Sensor Alert System</p>
-            <a href="#" target="_blank">🌐 Live Demo</a><br>
-            <a href="https://github.com/your-username/accident-system" target="_blank">🔗 GitHub</a>
+            <h3>Accident Detection System</h3>
+            <p>Sensor-based alert system with GPS tracking</p>
         </div>
 
         <div class="card">
             <h3>EduSense Gate</h3>
-            <p>Smart Attendance System</p>
-            <a href="#" target="_blank">🌐 Live Demo</a><br>
-            <a href="https://github.com/your-username/edusense" target="_blank">🔗 GitHub</a>
+            <p>Wi-Fi-based smart attendance system</p>
         </div>
 
+        <div class="card">
+            <h3>Dockerized Web App</h3>
+            <p>Deployed application using Docker containers</p>
+        </div>
+
+        <div class="card">
+            <h3>Kubernetes Deployment</h3>
+            <p>Deployed app using Kubernetes on cluster</p>
+        </div>
+
+        <div class="card">
+            <h3>AWS Hosting Project</h3>
+            <p>Hosted application using EC2 and S3</p>
+        </div>
     </div>
 </section>
 
@@ -152,12 +222,12 @@ footer {
     <div class="card">
         <p>📞 +91 9147298776</p>
         <p>📧 varunjavali07@gmail.com</p>
-        <p>🔗 <a href="https://github.com/your-username" target="_blank">GitHub Profile</a></p>
+        <p>🔗 linkedin.com/in/varun-javali</p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Varun Kumar</p>
+    <p>© 2026 Varun Kumar J A</p>
 </footer>
 
 </body>
