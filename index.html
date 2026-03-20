@@ -6,33 +6,33 @@
 <title>Varun Kumar | Portfolio</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Segoe UI', sans-serif;
+    margin: 0;
     background: #0b141a;
     color: white;
 }
 
-/* HEADER */
 header {
     text-align: center;
-    padding: 30px 15px;
+    padding: 30px;
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
-header p {
-    color: #9ca3af;
+.btn {
+    display: inline-block;
+    background: #25D366;
+    color: black;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* NAVBAR */
 nav {
     display: flex;
     justify-content: center;
@@ -43,67 +43,51 @@ nav {
 
 nav a {
     color: white;
-    margin: 8px 12px;
+    margin: 10px;
     text-decoration: none;
-    font-size: 0.9rem;
 }
 
-/* SECTION */
 section {
-    padding: 25px 15px;
+    padding: 20px;
     max-width: 1100px;
     margin: auto;
 }
 
-h2 {
-    margin-bottom: 15px;
-    border-left: 4px solid #25D366;
-    padding-left: 10px;
-}
-
-/* CARD GRID */
 .grid {
     display: grid;
     gap: 15px;
 }
 
-/* Desktop */
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Large Screens */
 @media (min-width: 1024px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* CARD */
 .card {
     background: #111b21;
     padding: 15px;
     border-radius: 10px;
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #25D366;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
 
-/* CONTACT */
-.contact p {
-    margin: 8px 0;
-}
-
-/* FOOTER */
 footer {
     text-align: center;
     padding: 15px;
     background: #111b21;
-    margin-top: 20px;
 }
 </style>
 
@@ -114,59 +98,61 @@ footer {
 <header>
     <h1>Varun Kumar J A</h1>
     <p>MCA Student | Software Developer</p>
+
+    <!-- Resume Button -->
+    <a href="resume.pdf" download class="btn">⬇ Download Resume</a>
 </header>
 
 <nav>
-    <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
 </nav>
-
-<section id="about">
-    <h2>About</h2>
-    <div class="card">
-        <p>
-            MCA student with experience in Flutter, backend development (PHP, Node.js),
-            and database systems. Passionate about building scalable applications.
-        </p>
-    </div>
-</section>
 
 <section id="skills">
     <h2>Skills</h2>
     <div class="grid">
-        <div class="card">Python, PHP, SQL, Dart, Java, C</div>
+        <div class="card">Python, PHP, SQL, Dart</div>
         <div class="card">Flutter, HTML, CSS</div>
         <div class="card">Node.js, REST APIs</div>
-        <div class="card">Git, Postman, VS Code</div>
+        <div class="card">Git, GitHub, Postman</div>
     </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
-        <div class="card">IoT Dashboard (Flutter + Node.js)</div>
-        <div class="card">Accident Detection System</div>
-        <div class="card">EduSense Attendance System</div>
-        <div class="card">Coffee Shop Network System</div>
-    </div>
-</section>
 
-<section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-        Software Developer - Herin Electronics (Flutter + Backend Development)
+        <div class="card">
+            <h3>IoT Dashboard</h3>
+            <p>Flutter + Node.js + MySQL</p>
+            <a href="#" target="_blank">🌐 Live Demo</a><br>
+            <a href="https://github.com/your-username/iot-dashboard" target="_blank">🔗 GitHub</a>
+        </div>
+
+        <div class="card">
+            <h3>Accident Detection</h3>
+            <p>GPS + Sensor Alert System</p>
+            <a href="#" target="_blank">🌐 Live Demo</a><br>
+            <a href="https://github.com/your-username/accident-system" target="_blank">🔗 GitHub</a>
+        </div>
+
+        <div class="card">
+            <h3>EduSense Gate</h3>
+            <p>Smart Attendance System</p>
+            <a href="#" target="_blank">🌐 Live Demo</a><br>
+            <a href="https://github.com/your-username/edusense" target="_blank">🔗 GitHub</a>
+        </div>
+
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
-    <div class="card contact">
+    <div class="card">
         <p>📞 +91 9147298776</p>
         <p>📧 varunjavali07@gmail.com</p>
-        <p>🔗 linkedin.com/in/varun-javali</p>
+        <p>🔗 <a href="https://github.com/your-username" target="_blank">GitHub Profile</a></p>
     </div>
 </section>
 
