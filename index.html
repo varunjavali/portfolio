@@ -119,6 +119,33 @@ footer{
     background:#020617;
     margin-top:30px;
 }
+.hero-buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:10px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:500;
+    background:linear-gradient(45deg,#25D366,#22c55e);
+    color:black;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.btn.outline{
+    background:transparent;
+    border:2px solid #25D366;
+    color:#25D366;
+}
 </style>
 </head>
 
@@ -131,6 +158,11 @@ footer{
     
     <h1>Varun Kumar J A</h1>
     <p id="typing" class="typing"></p>
+	
+	<div class="hero-buttons">
+        <a href="varun resume.pdf" download class="btn">📄 Download Resume</a>
+        <a href="https://www.linkedin.com/in/varun-javali-2b6587261/" target="_blank" class="btn outline">🔗 LinkedIn</a>
+    </div>
 </div>
 
 <!-- ABOUT -->
